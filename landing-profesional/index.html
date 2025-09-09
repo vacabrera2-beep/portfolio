@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Nombre Profesional] - Servicios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="brand">[Nombre Profesional]</div>
+    <div>
+      <a href="#servicios">Servicios</a>
+      <a href="#sobre-mi">Sobre mí</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>Servicios profesionales para ayudarte a crecer</h1>
+  <p>Atención personalizada, resultados claros y comunicación constante.</p>
+  <a href="#contacto" class="cta">Solicitar una consulta</a>
+</header>
+
+<div class="container">
+  <section id="servicios" class="card">
+    <h2>Servicios</h2>
+    <div class="grid grid-3">
+      <div>
+        <h3>Asesoría inicial</h3>
+        <p>Primera reunión para entender tus necesidades y definir objetivos.</p>
+        <span class="badge">Desde $[precio]</span>
+      </div>
+      <div>
+        <h3>Plan de acción</h3>
+        <p>Estrategia a medida con pasos concretos y tiempos estimados.</p>
+        <span class="badge">Desde $[precio]</span>
+      </div>
+      <div>
+        <h3>Acompañamiento</h3>
+        <p>Seguimiento y ajustes para asegurar resultados sostenibles.</p>
+        <span class="badge">Desde $[precio]</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="sobre-mi" class="card">
+    <h2>Sobre mí</h2>
+    <p>Soy [Nombre], [profesión], con experiencia en [área]. Trabajo de forma remota con clientes de [países/región].</p>
+  </section>
+
+  <section id="contacto" class="card">
+    <h2>Contacto</h2>
+    <p>Completá el formulario y te respondo a la brevedad.</p>
+    <form action="https://formspree.io/f/[tu_endpoint]" method="POST">
+      <div class="row">
+        <input name="nombre" placeholder="Tu nombre" required>
+        <input type="email" name="email" placeholder="Tu email" required>
+      </div>
+      <textarea name="mensaje" rows="5" placeholder="Contame qué necesitás" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p class="small">También podés escribir por WhatsApp: <a href="https://wa.me/[54911XXXXXXXX]" target="_blank">[+54 9 11 XXX XXXX]</a></p>
+  </section>
+</div>
+
+<footer>
+  <p>&copy; 2025 [Nombre Profesional] • Sitio creado por [Tu Nombre]</p>
+</footer>
+</body>
+</html>

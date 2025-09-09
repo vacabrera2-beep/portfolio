@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Nombre del Evento] - Inscripción</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Cuenta regresiva opcional (establecé la fecha del evento)
+    document.addEventListener('DOMContentLoaded', () => {
+      const target = new Date('[2025-12-31T18:00:00]').getTime();
+      const el = document.getElementById('countdown');
+      if(!el) return;
+      setInterval(()=>{
+        const now = new Date().getTime();
+        const diff = Math.max(0, target-now);
+        const d = Math.floor(diff/86400000);
+        const h = Math.floor((diff%86400000)/3600000);
+        const m = Math.floor((diff%3600000)/60000);
+        const s = Math.floor((diff%60000)/1000);
+        el.textContent = d+"d "+h+"h "+m+"m "+s+"s";
+      },1000);
+    });
+  </script>
+</head>
+<body>
+<nav>
+  <div class="nav-inner">
+    <div class="brand">[Nombre del Evento]</div>
+    <div>
+      <a href="#info">Información</a>
+      <a href="#inscripcion">Inscripción</a>
+      <a href="#lugar">Lugar</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <h1>¡Sumate a [Nombre del Evento]!</h1>
+  <p>Fecha: [dd/mm/aaaa] • Hora: [hh:mm]</p>
+  <p class="badge">Comienza en: <span id="countdown">--</span></p>
+  <a href="#inscripcion" class="cta">Inscribirme</a>
+</header>
+
+<div class="container">
+  <section id="info" class="card">
+    <h2>¿De qué se trata?</h2>
+    <p>Descripción breve del evento, oradores, actividades y a quién está dirigido.</p>
+  </section>
+
+  <section id="inscripcion" class="card">
+    <h2>Inscripción</h2>
+    <form action="https://formspree.io/f/[tu_endpoint]" method="POST">
+      <div class="row">
+        <input name="nombre" placeholder="Nombre" required>
+        <input name="apellido" placeholder="Apellido" required>
+      </div>
+      <div class="row">
+        <input type="email" name="email" placeholder="Email" required>
+        <input name="telefono" placeholder="Teléfono (opcional)">
+      </div>
+      <button type="submit">Enviar inscripción</button>
+    </form>
+    <p class="small">Cupo limitado. Recibirás un correo con la confirmación.</p>
+  </section>
+
+  <section id="lugar" class="card">
+    <h2>Lugar</h2>
+    <p>[Dirección, ciudad].</p>
+    <p><a class="cta" href="[link_google_maps]" target="_blank">Ver mapa</a></p>
+  </section>
+</div>
+
+<footer>
+  <p>&copy; 2025 [Nombre del Evento] • Sitio creado por [Tu Nombre]</p>
+</footer>
+</body>
+</html>
